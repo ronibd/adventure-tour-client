@@ -1,15 +1,15 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCfO65NIFGo5yJFq3k9pxT1sDNSQu2wOxA",
+  apiKey: "AIzaSyDDOL1nK_hm9ijG8EdGcifbiVN0mefBYwY",
 
-  authDomain: "react-firebase-authentic-4d2e2.firebaseapp.com",
+  authDomain: "adventure-tour-booking.firebaseapp.com",
 
-  projectId: "react-firebase-authentic-4d2e2",
+  projectId: "adventure-tour-booking",
 
-  storageBucket: "react-firebase-authentic-4d2e2.appspot.com",
+  storageBucket: "adventure-tour-booking.appspot.com",
 
-  messagingSenderId: "142984826107",
+  messagingSenderId: "538605008316",
 
-  appId: "1:142984826107:web:e4f46bff7ded1908ac345e",
+  appId: "1:538605008316:web:92d37872b9ebcdd5faa7b9",
 }
 
 export default firebaseConfig

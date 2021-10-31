@@ -17,7 +17,7 @@ const Checkout = () => {
   const history = useHistory()
 
   useEffect(() => {
-    fetch(`https://warm-reef-21791.herokuapp.com/getPackage?id=${id}`)
+    fetch(`https://shielded-escarpment-78906.herokuapp.com/getPackage?id=${id}`)
       .then((res) => res.json())
       .then((data) => setOrderedPackage(data))
   }, [])
@@ -34,7 +34,7 @@ const Checkout = () => {
       paymentID,
     }
 
-    fetch("https://warm-reef-21791.herokuapp.com/placeOrder", {
+    fetch("https://shielded-escarpment-78906.herokuapp.com/placeOrder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderObj),

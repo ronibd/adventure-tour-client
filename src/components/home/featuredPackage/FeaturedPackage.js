@@ -8,7 +8,7 @@ const FeaturedPackage = () => {
   const [packages, setPackages] = useState([])
 
   useEffect(() => {
-    fetch("https://warm-reef-21791.herokuapp.com/getFeaturedPackages")
+    fetch("https://shielded-escarpment-78906.herokuapp.com/getFeaturedPackages")
       .then((res) => res.json())
       .then((data) => setPackages(data))
   }, [packages])

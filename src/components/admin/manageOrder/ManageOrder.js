@@ -1,38 +1,38 @@
-import { CircularProgress } from "@material-ui/core";
-import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../App";
+import { CircularProgress } from "@material-ui/core"
+import React, { useContext, useEffect, useState } from "react"
+import { UserContext } from "../../../App"
 
 const ManageOrder = () => {
-  const [packages, setPackages] = useState([]);
-  const [user, setUser] = useContext(UserContext);
+  const [packages, setPackages] = useState([])
+  const [user, setUser] = useContext(UserContext)
 
   useEffect(() => {
-    fetch(`https://warm-reef-21791.herokuapp.com/getAllOrders`)
+    fetch(`https://shielded-escarpment-78906.herokuapp.com/getAllOrders`)
       .then((res) => res.json())
-      .then((data) => setPackages(data));
-  }, []);
+      .then((data) => setPackages(data))
+  }, [])
 
   return (
     <div>
-      <h2 className='display-5 py-5 text-center'>All Order</h2>
-      <div className='container'>
-        <div className='bg-light p-2 m-3'>
-          <table className='table'>
-            <thead className='thead-dark'>
+      <h2 className="display-5 py-5 text-center">All Order</h2>
+      <div className="container">
+        <div className="bg-light p-2 m-3">
+          <table className="table">
+            <thead className="thead-dark">
               <tr>
-                <th scope='col'>Package ID</th>
-                <th scope='col'>Package Name</th>
-                <th scope='col'>Price</th>
-                <th scope='col'>Location</th>
-                <th scope='col'>Booking Date</th>
-                <th scope='col'>Payment ID</th>
+                <th scope="col">Package ID</th>
+                <th scope="col">Package Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Location</th>
+                <th scope="col">Booking Date</th>
+                <th scope="col">Payment ID</th>
               </tr>
             </thead>
             <tbody>
               {packages.length > 0 ? (
                 ""
               ) : (
-                <div className='text-center'>
+                <div className="text-center">
                   <CircularProgress />
                 </div>
               )}
@@ -51,7 +51,7 @@ const ManageOrder = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ManageOrder;
+export default ManageOrder

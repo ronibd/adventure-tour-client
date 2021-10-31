@@ -7,7 +7,9 @@ const TestimonialSection = () => {
   const [testimonial, setTestimonial] = useState([])
 
   useEffect(() => {
-    fetch("https://warm-reef-21791.herokuapp.com/getFeaturedTestimonials")
+    fetch(
+      "https://shielded-escarpment-78906.herokuapp.com/getFeaturedTestimonials"
+    )
       .then((res) => res.json())
       .then((data) => setTestimonial(data))
   }, [testimonial])
